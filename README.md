@@ -1,34 +1,20 @@
-# Deploy ML models with FastAPI, Docker, and Heroku
+# Деплой модели
+### 1. Дообучить модель в коллабе
 
-### 1. Develop and save the model with this Colab
+https://colab.research.google.com/drive/1DTSqx2VNgfE5qJ0h7XdkPzemH_I2f2FA?usp=sharing
 
-[Open Colab](https://colab.research.google.com/drive/1uaALcaatvxOu42IhQA4r0bahfdpw-Z7v?usp=sharing)
+### 2. Скачать полученную папку model/essays в папку проекта app/model
 
-### 2. Create Docker container
+### 3. Склонировать и установить репозиторий transformers от huggingface
 
 ```bash
-docker build -t app-name .
-
-docker run -p 80:80 app-name
+git clone https://github.com/huggingface/transformers
+cd transformers
+pip install .
 ```
 
-### 3. Create Git repo
-
-If you clone this repo this step is not needed. Or you can delete this git repo with `rm -rf .git` and start with a new one:
+### 4. Запустить проект из папки app
 
 ```bash
-git init
-git add .
-git commit -m "initial commit"
-git branch -M main
-```
-
-### 4. Create Heroku project
-
-```bash
-heroku login
-heroku create your-app-name
-heroku git:remote your-app-name
-heroku stack:set container
-git push heroku main
+uvicorn main:app
 ```
