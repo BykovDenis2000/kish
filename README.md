@@ -18,3 +18,4 @@ pip install .
 ```bash
 uvicorn main:app
 ```
+### 5. Для запуска через Docker можно скачать образ из Docker Hub https://hub.docker.com/repository/docker/denbykov/kish/general
