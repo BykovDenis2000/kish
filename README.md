@@ -12,10 +12,15 @@ git clone https://github.com/huggingface/transformers
 cd transformers
 pip install .
 ```
-
-### 4. Запустить проект из папки app
+### 4. зависимости
+1. torch==2.0.0
+2. numpy==1.20.1
+3. scikit-learn==1.0.2
+4. https://github.com/huggingface/transformers
+5. FastApi
+### 5. Запустить проект из папки app
 
 ```bash
 uvicorn main:app
 ```
-### 5. Для запуска через Docker можно скачать образ из Docker Hub https://hub.docker.com/repository/docker/denbykov/kish/general
+### 6. Для запуска через Docker можно скачать образ из Docker Hub https://hub.docker.com/repository/docker/denbykov/kish/general
